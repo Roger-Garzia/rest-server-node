@@ -55,9 +55,6 @@ const updateUsers = (req, res = response) => {
 
 const deleteUsers = async(req, res = response) => {
     const id = req.params.id;
-    
-    // Eliminar de manera fisica al Usuario
-    // const usuario = await Usuario.findByIdAndDelete(id);
 
     // Cambiando estado del usuario
     const usuario = await Usuario.findByIdAndUpdate(id, { estado: false });
